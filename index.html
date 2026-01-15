@@ -22,30 +22,30 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 cursor-pointer" onclick="window.scrollTo({top:0, behavior:'smooth'})">
-                    <span class="font-bold text-2xl text-blue-900 tracking-tight">Jiten<span
-                            class="text-blue-500">.</span></span>
-                </div>
+                <span class="font-bold text-2xl text-blue-900 tracking-tight">Jiten<span class="text-blue-500">.</span></span>
+            </div>
 
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home"
-                        class="desktop-link text-sm font-medium text-blue-700 border-b-2 border-blue-700 transition-colors duration-300">Home</a>
-                    <a href="#about"
-                        class="desktop-link text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors duration-300">About</a>
-                    <a href="#skills"
-                        class="desktop-link text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors duration-300">Skills</a>
-                    <a href="#experience"
-                        class="desktop-link text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors duration-300">Experience</a>
-                    <a href="#projects"
-                        class="desktop-link text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors duration-300">Projects</a>
-                    <a href="#contact"
-                        class="desktop-link text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors duration-300">Contact</a>
-                </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="desktop-link text-sm font-medium text-blue-700 border-b-2 border-blue-700 transition-colors duration-300">Home</a>
+                <a href="#about" class="desktop-link text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors duration-300">About</a>
+                <a href="#skills" class="desktop-link text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors duration-300">Skills</a>
+                <a href="#experience" class="desktop-link text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors duration-300">Experience</a>
+                <a href="#projects" class="desktop-link text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors duration-300">Projects</a>
+                <a href="#contact" class="desktop-link text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors duration-300">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                
+                <button id="theme-toggle-btn" class="p-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors focus:outline-none" aria-label="Toggle Theme">
+                    <i id="theme-toggle-icon" data-lucide="moon" width="22" height="22"></i>
+                </button>
 
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-slate-600 hover:text-blue-900 focus:outline-none">
                         <i id="menu-icon" data-lucide="menu" width="24" height="24"></i>
                     </button>
                 </div>
+            </div>
             </div>
         </div>
 
@@ -207,7 +207,7 @@
 
                         <div class="flex flex-col gap-2">
                             <div class="flex justify-center">
-                                <img src="https://github-readme-stats.vercel.app/api?username=JitenRaj&show_icons=true&theme=transparent&hide_border=true&include_all_commits=true&count_private=true"
+                                <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=JitenRaj&show_icons=true&theme=transparent&hide_border=true&include_all_commits=true&count_private=true"
                                     alt="JitenRaj's Github Stats" class="h-32 w-auto object-contain" />
                             </div>
                             <div class="border-t border-slate-100 pt-2">
@@ -266,7 +266,7 @@
 
     <section id="projects" class="py-20 px-4 bg-slate-900 text-white">
         <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16">
+            <div class="text-center mb-8">
                 <h2 class="text-3xl font-bold mb-4">Featured Projects</h2>
                 <div class="w-16 h-1 bg-blue-500 mx-auto rounded-full"></div>
             </div>
@@ -392,7 +392,11 @@
         </div>
     </footer>
 
-    <script type="module" src="script.js"></script>
+    <div id="particles-js"></div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script type="module" src="main.js"></script>
 
     <script>
         document.getElementById('copyright').innerHTML = `© ${new Date().getFullYear()} Jitendra Singh Rajpurohit. All rights reserved.`;
