@@ -1,46 +1,322 @@
 /* styles.css */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-body {
-    font-family: 'Inter', sans-serif;
+/* =========================================
+   1. VARIABLES & THEME SETUP
+   ========================================= */
+:root {
+  --bg-body: #f8fafc;
+  --bg-card: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --border-color: #e2e8f0;
+
+  /* Scrollbar */
+  --scrollbar-track: #f1f5f9;
+  --scrollbar-thumb: #cbd5e1;
+  --scrollbar-thumb-hover: #94a3b8;
 }
 
-/* Animations */
+.dark {
+  --bg-body: #0f172a;
+  --bg-card: #1e293b;
+  --text-main: #e2e8f0;
+  --text-muted: #94a3b8;
+  --border-color: #334155;
+
+  /* Scrollbar Dark */
+  --scrollbar-track: #0f172a;
+  --scrollbar-thumb: #334155;
+  --scrollbar-thumb-hover: #475569;
+}
+
+/* =========================================
+   2. BASE STYLES
+   ========================================= */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* =========================================
+   3. DARK MODE OVERRIDES
+   ========================================= */
+
+/* --- Backgrounds & Sections --- */
+.dark .bg-white,
+.dark .bg-slate-50 {
+  background-color: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+.dark section#home,
+.dark section#skills,
+.dark section#experience {
+  background: var(--bg-body);
+}
+
+.dark section#about,
+.dark section#contact,
+.dark nav {
+  background-color: var(--bg-body);
+  border-bottom-color: var(--border-color);
+}
+
+.dark nav {
+  background-color: rgba(15, 23, 42, 0.9);
+}
+
+/* --- Text Grays --- */
+.dark .text-slate-900,
+.dark .text-slate-800,
+.dark .text-slate-700 {
+  color: #f1f5f9;
+}
+
+.dark .text-slate-600,
+.dark .text-slate-500 {
+  color: #cbd5e1;
+}
+
+/* --- Brighten Blues for Dark Mode --- */
+.dark .text-blue-900 {
+  color: #f8fafc;
+}
+
+.dark .text-blue-700,
+.dark .text-blue-600 {
+  color: #60a5fa; /* Blue-400 */
+}
+
+.dark a:hover .text-blue-700 {
+  color: #93c5fd; /* Blue-300 */
+}
+
+.dark .border-blue-700 {
+  border-color: #60a5fa;
+}
+
+.dark .bg-blue-700,
+.dark .bg-blue-600 {
+  background-color: #3b82f6; /* Blue-500 */
+  color: #ffffff;
+}
+
+.dark .bg-blue-700:hover {
+  background-color: #2563eb; /* Blue-600 */
+}
+
+/* --- Inputs & Borders --- */
+.dark .border-slate-200,
+.dark .border-slate-100,
+.dark .border-slate-300 {
+  border-color: var(--border-color);
+}
+
+.dark input,
+.dark textarea {
+  background-color: #334155;
+  border-color: #475569;
+  color: white;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* --- Shadows --- */
+.dark .shadow-sm,
+.dark .shadow-md,
+.dark .shadow-lg {
+  box-shadow: none;
+}
+
+/* =========================================
+   4. ANIMATIONS & SCROLLBAR
+   ========================================= */
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translate3d(0, 20px, 0);
-    }
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
+  from { opacity: 0; transform: translate3d(0, 20px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-.animate-fade-in-up {
-    animation: fadeInUp 0.5s ease-out forwards;
+.animate-fade-in-up { animation: fadeInUp 0.5s ease-out forwards; }
+.animate-fade-in { animation: fadeIn 0.5s ease-out forwards; }
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--scrollbar-track); transition: background 0.3s; }
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 4px; transition: background 0.3s; }
+::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover); }
+
+/* =========================================
+   5. INVERTED PROJECT SECTION (Light in Dark Mode)
+   ========================================= */
+
+/* Force Light Theme appearance for Projects section while in Dark Mode */
+.dark section#projects {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
 }
 
-.animate-fade-in {
-    animation: fadeIn 0.5s ease-out forwards;
+.dark #projects-grid {
+  background-color: transparent !important;
 }
 
-/* Scrollbar beautification (optional, matches standard dev portfolios) */
-::-webkit-scrollbar {
-    width: 8px;
+/* Invert Project Cards to White */
+.dark #projects-grid .bg-slate-800 {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
-::-webkit-scrollbar-track {
-    background: #f1f5f9;
+
+/* Color Corrections for Inverted Cards */
+.dark #projects-grid h3.text-white { color: #0f172a !important; }
+.dark #projects-grid .text-slate-300 { color: #475569 !important; }
+.dark #projects-grid a { color: #2563eb !important; }
+
+.dark #projects-grid span[class*="bg-"] {
+  background-color: #eff6ff !important;
+  color: #1d4ed8 !important;
+  border-color: #dbeafe !important;
 }
-::-webkit-scrollbar-thumb {
-    background: #cbd5e1;
-    border-radius: 4px;
+
+/* =========================================
+   6. API IMAGE FIXES
+   ========================================= */
+
+/* GitHub Chart: Invert colors for Dark Mode compatibility */
+.dark img[src*="ghchart"] {
+  filter: invert(1) hue-rotate(180deg);
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }
-::-webkit-scrollbar-thumb:hover {
-    background: #94a3b8;
+
+/* LeetCode Card: Use Blend Mode to handle black background */
+.dark img[src*="leetcard"] {
+  mix-blend-mode: lighten;
+  filter: brightness(1.1);
+  transition: all 0.3s ease;
+}
+
+/* GitHub Stats: Smooth transition */
+.dark img[src*="github-readme-stats"] {
+  transition: opacity 0.3s ease;
+}
+
+/* Container Fix: Ensure background allows blend mode to work */
+.dark #skills-grid .bg-white {
+  background-color: #1e293b !important;
+  position: relative;
+  z-index: 1;
+  border-color: #334155 !important;
+}
+
+/* =========================================
+   7. CARD GLOW EFFECTS
+   ========================================= */
+
+/* Define Glow Targets */
+.dark #about .prose,
+.dark #skills-grid > div,
+.dark section#skills .bg-white,
+html:not(.dark) #projects-grid .bg-slate-800 {
+  position: relative;
+  isolation: isolate;
+  border: 1px solid rgba(51, 65, 85, 0.5) !important;
+  background-clip: padding-box;
+  border-radius: 0.75rem;
+}
+
+/* Glow Pseudo-element */
+.dark #about .prose::before,
+.dark #skills-grid > div::before,
+.dark section#skills .bg-white::before,
+html:not(.dark) #projects-grid .bg-slate-800::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  z-index: -1;
+  background: linear-gradient(to right, #2563eb, #06b6d4);
+  filter: blur(12px);
+  opacity: 0.25;
+  border-radius: inherit;
+  animation: pulseGlow 4s infinite;
+}
+
+/* Hover Intensity */
+.dark #skills-grid > div:hover::before,
+.dark section#skills .bg-white:hover::before,
+html:not(.dark) #projects-grid .bg-slate-800:hover::before {
+  opacity: 0.5;
+  filter: blur(16px);
+  transition: all 0.3s ease;
+}
+
+/* Optional Top Border Line */
+.dark #skills-grid > div::after,
+.dark section#skills .bg-white::after,
+html:not(.dark) #projects-grid .bg-slate-800::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, #3b82f6, #06b6d4);
+  z-index: 10;
+  opacity: 0.5;
+  border-radius: 0.75rem 0.75rem 0 0;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 0.15; }
+}
+
+/* =========================================
+   8. PARTICLES BACKGROUND
+   ========================================= */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 1;
+}
+
+/* Ensure content sits above particles */
+nav, section, footer {
+  position: relative;
+  z-index: 10;
+}
+
+/* Make sections transparent so particles are visible */
+section#home,
+section#about,
+section#skills,
+section#experience,
+section#contact {
+  background-color: transparent !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Body Backgrounds (Canvas for particles) */
+body {
+  background-color: #f8fafc;
+}
+
+.dark body {
+  background-color: #0f172a;
 }
