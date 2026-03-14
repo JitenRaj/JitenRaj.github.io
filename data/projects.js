@@ -13,6 +13,17 @@ export const projects = [
         url: "https://github.com/JitenRaj/luxestay-backend"
     },
     {
+        title: "Wizzy: Offline Web GPT",
+        icon: "zap",
+        iconColor: "text-yellow-400",
+        tags: ["JavaScript", "TypeScript", "Wllama", "LLMs"],
+        tagColor: "yellow",
+        desc: "A lightning-fast, entirely browser-based offline AI assistant. Runs Large Language Models (LLMs) entirely within your web browser with <strong>no backend servers, API keys, or subscriptions</strong>, ensuring absolute data privacy.",
+        linkText: "View Code",
+        linkColor: "text-blue-400 hover:text-yellow-300",
+        url: "https://github.com/JitenRaj/wizzy"
+    },
+    {
         title: "SpringBolt",
         icon: "leaf",
         iconColor: "text-green-400",
@@ -35,6 +46,17 @@ export const projects = [
         url: "https://github.com/JitenRaj/Gemini-Image-Generator"
     },
     {
+        title: "GitHub Activity CLI",
+        icon: "terminal",
+        iconColor: "text-emerald-400",
+        tags: ["Java", "Spring Boot", "GitHub Actions", "Maven"],
+        tagColor: "emerald",
+        desc: "A lightweight, interactive command-line tool built with Java 17 and Spring Boot. Allows you to fetch, filter, and view any GitHub user's recent <strong>public activity directly from your terminal</strong>.",
+        linkText: "View Code",
+        linkColor: "text-blue-400 hover:text-emerald-300",
+        url: "https://github.com/JitenRaj/github-activity-cli"
+    },
+    {
         title: "FinTech Microservices",
         icon: "activity",
         iconColor: "text-cyan-400",
@@ -44,6 +66,17 @@ export const projects = [
         linkText: "View Code",
         linkColor: "text-blue-400 hover:text-cyan-300",
         url: "#"
+    },
+    {
+        title: "URL Shortener",
+        icon: "link",
+        iconColor: "text-pink-400",
+        tags: ["Java", "Spring Boot", "Spring MVC", "APIs"],
+        tagColor: "pink",
+        desc: "A robust URL shortening service built with Spring Boot and Spring MVC. Designed to create concise, manageable links and features comprehensive RESTful APIs tested with Postman.",
+        linkText: "View Code",
+        linkColor: "text-blue-400 hover:text-pink-300",
+        url: "https://github.com/JitenRaj/url-shortener"
     },
     {
         title: "E-commerce Web App",
