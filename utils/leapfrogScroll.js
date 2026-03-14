@@ -1,7 +1,7 @@
 // Leapfrog Scrolling for Projects
 
 export function initLeapfrogScroll(container, track, prevBtn, nextBtn) {
-    let speed = 0.5; 
+    let speed = 1.0;
     let offset = 0;
     let isPaused = false;
     let isAnimating = false;
