@@ -109,6 +109,34 @@ export function initLeapfrogScroll(container, track, prevBtn, nextBtn) {
         }, 500);
     };
 
+    // --- TOUCH / SWIPE SUPPORT ---
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    track.addEventListener('touchstart', (e) => {
+        isPaused = true;
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    track.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+        isPaused = false; 
+    }, { passive: true });
+
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const difference = touchStartX - touchEndX;
+
+        if (Math.abs(difference) > swipeThreshold) {
+            if (difference > 0) {
+                handleNext(); // Swiped left
+            } else {
+                handlePrev(); // Swiped right
+            }
+        }
+    }
+
     // --- CONTROLS ---
     
     // Pause Logic
