@@ -10,7 +10,7 @@ export const projects = [
         desc: "A comprehensive RESTful application featuring room filtering, booking management, and price calculation. Implemented <strong>Role-Based Access Control (RBAC)</strong> using Spring Security and optimized query performance resulting in a <strong>25% reduction</strong> in response times.",
         linkText: "View Details",
         linkColor: "text-blue-400 hover:text-blue-300",
-        url: "https://github.com/JitenRaj/luxestay-backend"
+        url: "https://github.com/JitenRajpurohit/luxestay-backend"
     },
     {
         title: "Wizzy: Offline Web GPT",
@@ -21,7 +21,7 @@ export const projects = [
         desc: "A lightning-fast, entirely browser-based offline AI assistant. Runs Large Language Models (LLMs) entirely within your web browser with <strong>no backend servers, API keys, or subscriptions</strong>, ensuring absolute data privacy.",
         linkText: "View Code",
         linkColor: "text-blue-400 hover:text-yellow-300",
-        url: "https://github.com/JitenRaj/wizzy"
+        url: "https://github.com/JitenRajpurohit/wizzy"
     },
     {
         title: "SpringBolt",
@@ -43,7 +43,7 @@ export const projects = [
         desc: "An intelligent image generation tool leveraging <strong>Google's Gemini Pro</strong> models. Features a responsive interface for transforming text prompts into high-quality visuals in real-time.",
         linkText: "View Code",
         linkColor: "text-blue-400 hover:text-purple-300",
-        url: "https://github.com/JitenRaj/Gemini-Image-Generator"
+        url: "https://github.com/JitenRajpurohit/Gemini-Image-Generator"
     },
     {
         title: "GitHub Activity CLI",
@@ -54,7 +54,7 @@ export const projects = [
         desc: "A lightweight, interactive command-line tool built with Java 17 and Spring Boot. Allows you to fetch, filter, and view any GitHub user's recent <strong>public activity directly from your terminal</strong>.",
         linkText: "View Code",
         linkColor: "text-blue-400 hover:text-emerald-300",
-        url: "https://github.com/JitenRaj/github-activity-cli"
+        url: "https://github.com/JitenRajpurohit/github-activity-cli"
     },
     {
         title: "FinTech Microservices",
@@ -76,7 +76,7 @@ export const projects = [
         desc: "A robust URL shortening service built with Spring Boot and Spring MVC. Designed to create concise, manageable links and features comprehensive RESTful APIs tested with Postman.",
         linkText: "View Code",
         linkColor: "text-blue-400 hover:text-pink-300",
-        url: "https://github.com/JitenRaj/url-shortener"
+        url: "https://github.com/JitenRajpurohit/url-shortener"
     },
     {
         title: "E-commerce Web App",
